@@ -1,0 +1,142 @@
+:root {--red:#da251d;--light-grey:#f0efef;--grey:#767676;--darkgrey:#565656;}
+*,body{margin:0;padding:0;font-family:'Poppins',sans-serif;box-sizing:border-box;}
+body{font-size:0.85rem;line-height:1.7;}
+ul{list-style:none;}
+a{text-decoration:none;background:no-repeat 0 100%;background-image:linear-gradient(var(--red), var(--red));background-size:0% 1px;transition:background-size .3s ease;color:black;}
+a:hover{color:var(--red);}
+img{max-width:100%;}
+.btn{display: inline-block;white-space: nowrap; font-size:0.8rem;font-weight:400; color: #000; text-align: center; vertical-align: middle; user-select: none; background-color: transparent; border: 1px solid transparent; padding: 0.25rem 1rem; line-height: 1.5; border-radius: 0.25rem; transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;text-transform: uppercase;}
+.btn-primary{background-color:var(--red);border-color:var(--red);color:white;}
+.btn-primary:hover{color:white;}
+.btn-outline{background-color:transparent;border-color:var(--red);color:var(--red);}
+.btn-outline:hover,.btn-outline:focus{background-color:var(--red);border-color:var(--red);color:white;}
+.btn-outline-grey{background-color:transparent;border-color:var(--grey);color:var(--grey);}
+.btn-outline-grey:hover,.btn-outline-grey:focus{background-color:var(--grey);border-color:var(--grey);color:white;}
+.btn-dark,.btn-dark:hover{background-color:black;border-color:black;color:white;}
+.text-uppercase{text-transform:uppercase;}
+.red{color:var(--red);}
+.dropdown{position: relative;}
+.dropdown .arrow{transform: rotate(135deg); display: inline-block;margin-left:5px;width:7px; height:7px; border-top:1px solid var(--grey); border-right:1px solid var(--grey);margin-top:-3px;}
+.dropdown .dropdown-menu{background-color: white; display: none; width:auto; border-radius:8px;  padding:0; position: absolute; z-index: 999; right:0; top:40px;box-shadow:0 0 20px rgb(0 0 0 / 10%); }
+.dropdown .dropdown-menu::before{position: absolute;top: -10px;content: "";right:12px;width: 0px;height: 0px;border-left: 10px solid transparent;border-right: 10px solid transparent;border-bottom: 10px solid #ffffff;}
+.dropdown.active .dropdown-menu{display:block;}
+.dropdown.active .dropdown-menu.menu{width:150px;padding:10px 0;}
+.dropdown .dropdown-menu.language li{border-bottom:1px solid var(--light-grey);}
+.dropdown .dropdown-menu.language li:last-child{border-bottom-color:transparent;} 
+.dropdown .dropdown-menu.language li a{font-size:13px;padding:5px 15px;}
+.dropdown .dropdown-menu.menu li{padding:5px 15px;}
+.dropdown .dropdown-menu.menu li a{font-size:0.8rem;display:inline-block;white-space: nowrap;font-weight:400;color: var(--grey);}
+.dropdown hr{height: 1px;background-color:var(--light-grey);margin:10px 0;padding:0;border:none;}
+.fixcontainer{max-width:1000px;margin:0 auto;}
+.timestemp{display:flex;justify-content: space-between;font-size:11px;align-items:center;width:100%;margin-top:10px;}
+.timestemp .label{color: var(--grey);display: flex; align-items: center;}
+.timestemp .label svg{width:16px;height:16px;fill:#ccc; margin-left:10px;}
+.timestemp .label svg.plus{width:20px;height:20px;}
+.timestemp .label svg.prime{width:16px;height:16px;}
+.timestemp .label span{margin-right:10px;}
+.timestemp .bookmark{display: flex; align-items: center;}
+.timestemp .bookmark svg{width:18px;height:18px;fill: var(--grey);}
+.timestemp .bookmark.active svg,.timestemp .bookmark:hover svg{fill: var(--red);}
+header{display:flex;justify-content: space-between;padding:15px 0;border-bottom:1px solid var(--light-grey);}
+header .logo a{display: block;}
+header .logo a svg{width:180px;height:28px;}
+header ul{display:flex;align-items:center;}
+header ul li.user{padding:0;}
+header ul li.user a{display: flex; align-items: center;width:35px;}
+header ul li.user img{width:25px;height:25px;border-radius:40px;}
+.border-btm{border-bottom: 1px solid var(--light-grey); padding-bottom:12px;}
+.my-account{display:flex;padding-top:50px;padding-bottom:50px;}
+.my-account aside{width:300px;}
+.my-account aside p small a{color: var(--red);}
+.my-account aside p small a:hover{background-size:100% 1px;}
+.my-account aside p b{font-weight:600;}
+.my-account aside ul{margin-bottom:50px;}
+.my-account aside ul li{margin:10px 0;}
+.my-account aside ul hr{border: none;background-color: var(--light-grey);height:1px;margin:15px 0;}
+.my-account aside ul li a.active{font-size:1rem;font-weight:600; color: var(--red);}
+.my-account aside ul li a:hover{background-size:100% 1px;color: var(--red);}
+.my-account section{width:calc(100% - 300px);padding-left:30px;}
+.my-account section h2{margin-bottom:20px;padding-bottom:10px;border-bottom:1px solid var(--light-grey);font-weight:600;}
+.my-account section .list li{display:flex;margin-bottom:15px;padding-bottom:15px;border-bottom:1px solid var(--light-grey);position:relative;flex-wrap:wrap;}
+.my-account section .list li.no-border,.my-account section .list li:last-child{border-bottom-color: transparent;margin-bottom:0;padding-bottom:0;}
+.my-account section .list li figure{width:100px;}
+.my-account section .list li figure img{margin-top:5px;}
+.my-account section .list li .summary{width:calc(100% - 100px);padding-left:20px;}
+.my-account section .list.overflow li .summary{display:flex;}
+.my-account section .list li .summary.full{width:100%;height:auto;padding-left:0;}
+.my-account section .list li .summary p{font-size:0.9rem;font-weight:500;}
+.my-account section .list li .summary a:hover{background-size:100% 1px;}
+.my-account section .list li .icon{margin-top:5px;position: absolute; top: 0; right: 0;}
+.my-account section .list li .icon svg{width:18px;height:18px;fill:var(--red);}
+.my-account section .user-info{display: flex;margin-bottom:30px;}
+.my-account section .user-info figure{width:100px;height:100px;border-radius:100px;overflow: hidden;}
+.my-account section .user-info .info{width:calc(100% - 100px);padding-left:30px;}
+.my-account section .user-info .info li{margin-bottom:10px;display: flex;}
+.my-account section .user-info .info li span.label{width:100px;display: inline-block;}
+.my-account section .user-info .info li span.name{font-size:1rem;font-weight:600;}
+.my-account section .user-info .info li .edit{display: flex;align-items: center;margin-left:5px;}
+.my-account section .user-info .info li .edit svg{width:24px;height:24px;fill: var(--red);}
+.my-account section .user-info .info li .change-password{color: #006cff;font-weight:500;}
+.my-account section .user-info .info li .change-password:hover{background-size:100% 1px;color:var(--red)}
+.my-account section .subscription-box{border: 2px solid var(--red);padding:30px;}
+.my-account section .subscription-box h3{font-size:1.2rem;font-weight:600;margin-bottom:15px;}
+.my-account section .subscription-box .points{display: flex; align-items:flex-end;justify-content: space-between;}
+.my-account section .subscription-box .points li{display: flex; align-items: center;margin-bottom:10px;}
+.my-account section .subscription-box .points li:last-child{margin-bottom:0;}
+.my-account section .subscription-box .points li svg{width:16px;height:16px;margin-right:5px;fill: var(--red);}
+.my-account section .user-preview{text-align:center;}
+.my-account section .user-preview figure{width:100px;height:100px;border-radius:100px;overflow: hidden;margin: 0 auto 15px;}
+.my-account section .user-preview li{display:flex;justify-content:center;}
+.my-account section .user-preview li .edit{display:flex;justify-content:center;align-items:center;}
+.my-account section .user-preview li .edit svg{width:24px;height:24px;margin-left:5px;fill: var(--red);}
+.my-account section .user-preview li small{color:var(--grey)}
+.my-account section .interest-btn{margin-top:20px;}
+.my-account section .interest-btn .btn{padding:0.55rem 2.5rem;}
+.profile{padding:30px 0;}
+.profile .form-col{padding:20px 20px 10px;}
+.profile .form-col h4{font-size:1em;font-weight:600;margin:0 0 15px;}
+.profile .form-col .form-box{background-color: white;box-shadow: 0 0 30px rgb(0 0 0 / 08%);border:1px solid var(--light-grey); border-radius: 8px;padding:25px;}
+.profile .form-col .form-group.space-top{padding-top:15px;}
+.profile .form-col .form-group{padding-bottom:15px;}
+.profile .form-col .form-group p{margin:0;}
+.profile .form-col .form-group:last-child{padding-bottom:0;}
+.profile .form-col .form-group label{font-size:0.75em;font-weight:600;margin-bottom:5px;display:block;text-transform: uppercase;}
+.profile .form-col .form-group .form-control{display: block;width: 100%;height:40px;padding:.375rem 1.2rem;font-size:0.9em;font-weight: 400;line-height: 1.5;color: #495057;background-color: #fff;background-clip: padding-box;border: 1px solid #ced4da;border-radius:4px;}
+.profile .form-col .form-group .form-control::placeholder{color: #ddd;}
+.form-check-inline {display: inline-flex;align-items: center;padding-left: 0;margin-right: .75rem;}
+.form-check-inline .form-check-input{margin:0;}
+.form-check-inline .form-check-label{margin:0 0 0 5px;font-size:0.75em;font-weight:600;}
+.cboxtags{list-style:none;}
+.cboxtags li{display:inline;margin-right:10px;}
+.cboxtags li label{display:inline-block;background-color:rgba(255, 255, 255, .9);color:#333;border-radius:6px;white-space:nowrap;margin:3px 0px;-webkit-touch-callout:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;transition:all .2s;border:1px solid var(--light-grey);box-shadow: 0px 0px 20px rgb(0 0 0 / 08%);}
+.cboxtags li label{padding:10px 25px;cursor:pointer;font-size:1em;font-weight: 600;margin-bottom:10px;}
+.cboxtags li input[type="checkbox"]:checked + label{background-color:var(--red);color:#fff;transition:all .2s;}
+.cboxtags li input[type="checkbox"]{display:absolute;}
+.cboxtags li input[type="checkbox"]{position:absolute;opacity:0;}
+.cboxtags li input[disabled="disabled"] + label{color:rgba(51, 51, 51, 0.4);opacity:0.8;}
+.authors-listing{display:flex;flex-wrap: wrap;}
+.authors-listing li{border: 1px solid var(--light-grey);padding:15px;margin-bottom:15px;width:calc(25% - 12px);margin-right:15px;}
+.authors-listing li:nth-child(4n + 4){margin-right:0;}
+.authors-listing li h5{font-size:0.8rem;margin-bottom:10px;}
+.authors-listing li figure{width:50px;height:50px;overflow: hidden;border-radius: 50px; margin:0 auto 10px;}
+.authors-listing li .authors-info{text-align: center;}
+.authors-listing li .authors-info p{font-size:0.8rem;margin-bottom:5px;}
+.authors-listing li .authors-info a.btn{padding:0.1rem 0.7rem;font-size: 0.65rem;}
+@media only screen and (max-width:850px){
+    .container{max-width:96%;margin:0 auto;}
+    header{padding:10px 0;}
+    header .logo a svg{width:140px;height:23px;}    
+    .my-account{flex-wrap: wrap;padding-left:15px;padding-right:15px;padding-top:20px;}
+    .my-account aside{width:100%;display:none;}
+    .my-account section{width:100%;padding-left:0;}
+    .my-account section .user-info{flex-wrap: wrap;}
+    .my-account section .user-info figure{margin-bottom:15px;}
+    .my-account section .user-info .info{width:100%;padding-left:0;}
+    .my-account section .subscription-box .points{flex-wrap: wrap;}
+    .my-account section .subscription-box .points ul{margin-bottom:15px;}
+    .my-account section .user-info .info li{flex-wrap: wrap;}
+    .my-account section .user-info .info li span.label{width:100%;font-weight:600;font-size:0.8rem;}
+    .profile .form-col{padding:20px 0;}
+    .authors-listing li{width:calc(50% - 8px);}
+    .authors-listing li:nth-child(2n + 2){margin-right:0;}
+}
